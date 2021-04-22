@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on My New Hugo Site</title>
-    <link>http://example.org/categories/</link>
-    <description>Recent content in Categories on My New Hugo Site</description>
+    <title>Categories on Anova WIKI</title>
+    <link>https://jdvalenzuelah.github.io/anova-wiki/categories/</link>
+    <description>Recent content in Categories on Anova WIKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-        <atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jdvalenzuelah.github.io/anova-wiki/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Anova 2 factores</title>
-      <link>http://example.org/anova/2factor/</link>
+      <link>https://jdvalenzuelah.github.io/anova-wiki/anova/2factor/</link>
       <pubDate>Wed, 21 Apr 2021 16:29:25 -0600</pubDate>
       
-      <guid>http://example.org/anova/2factor/</guid>
+      <guid>https://jdvalenzuelah.github.io/anova-wiki/anova/2factor/</guid>
       <description>&lt;h1 id=&#34;modelo-de-anova&#34;&gt;Modelo de anova&lt;/h1&gt;
 &lt;p&gt;Suponiendo que tenemos:&lt;/p&gt;
 &lt;ul&gt;
