@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Anova 2 factores&nbsp;&ndash;&nbsp;My New Hugo Site</title><link rel="stylesheet" href="/css/core.min.86791815bdcfebb0d6f9e3581f3aa791893d6c8fca8aa6cf4bf37aa303965afafff7dfa72fdab433cf3aec4d2cb07fcf.css" integrity="sha384-hnkYFb3P67DW&#43;eNYHzqnkYk9bI/KiqbPS/N6owOWWvr/99&#43;nL9q0M8867E0ssH/P"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Anova 2 factores" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">My New Hugo Site</span></a></span>
+        <span class="header right-side"></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Anova 2 factores</h1><p class="article date">Lunes, Enero 21, 2021</p></section><article class="article markdown-body"><h1 id="modelo-de-anova">Modelo de anova</h1>
+<p>Suponiendo que tenemos:</p>
+<ul>
+<li>Factor A con a niveles</li>
+<li>Factor B con b niveles</li>
+<li>n replicas</li>
+</ul>
+<h3 id="modelo">Modelo:</h3>
+<p>$$
+y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha \beta)_{ij} + e_{ijk} \enspace
+\begin{cases}
+i = 1 &hellip; a \\<br>
+j = 1 &hellip; b \\<br>
+k = 1 &hellip; n
+\end{cases}
+$$</p>
+<h4 id="donde">Donde:</h4>
+<ul>
+<li>$y_{ijk}$ denota la ijk-ésima observación</li>
+<li>$\mu$ es la media global</li>
+<li>$\alpha_i$ es un parámetro asociado al i-ésimo nivel del factor A</li>
+<li>$\beta_j$ es un parámetro asociado al j-ésimo nivel del factor B</li>
+<li>$(\alpha \beta)_{ij}$  s un parámetro asociado al ij-ésimo tratamiento del nivel i de A con el nivel j de B</li>
+<li>$e_{ijk}$ es el componente de error aleatorio. Supone normalmente distribuido, con media cero, varianza constante e independientes.</li>
+</ul>
+<h1 id="planteamiento-de-hipótesis">Planteamiento de hipótesis</h1>
+<p>Se tendran 3 juegos de hipotesis, para el factor A, B y el factor de interaccion AB.</p>
+<h4 id="para-el-factor-a">Para el factor A:</h4>
+<p>$$
+\text{Ho:}\enspace\sum_{i = 1}^{a} \alpha_i = 0 \\<br>
+\text{Ha:}\enspace\alpha_i \neq 0 \enspace\text{para algún}\enspace i
+$$</p>
+<h4 id="para-el-factor-b">Para el factor B:</h4>
+<p>$$
+\text{Ho:}\enspace\sum_{j = 1}^{b} \beta_j = 0 \\<br>
+\text{Ha:}\enspace\beta_j \neq 0 \enspace\text{para algún}\enspace j
+$$</p>
+<h4 id="para-el-factor-de-intereaccion-ab">Para el factor de intereaccion AB:</h4>
+<p>$$
+\text{Ho:}\enspace\sum_{i = 1}^{a}\sum_{j = 1}^{b} (\alpha\beta)_{ij} = 0 \\<br>
+\text{Ha:}\enspace(\alpha\beta)_{ij} \neq 0 \enspace\text{para algún}\enspace ij
+$$</p>
+<h1 id="tabla-anova">Tabla Anova</h1>
+<table>
+<thead>
+<tr>
+<th>Fuente u  origen de  la  variación</th>
+<th>Suma de  Cuadrados ($SS$)</th>
+<th>Grados  de  Libertad ($df$)</th>
+<th>Media de  Cuadrados ($MS$)</th>
+<th>F</th>
+<th>F crítico</th>
+<th>Valor P</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>$SS_A$</td>
+<td>$a$</td>
+<td>$MS_A=\frac{SS_A}{a-1}$</td>
+<td>$\frac{MS_A}{MS_e}$</td>
+<td>$F(\alpha, a-1, ab(n-1))$</td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>$SS_B$</td>
+<td>$b$</td>
+<td>$MS_B=\frac{SS_B}{b-1}$</td>
+<td>$\frac{MS_B}{MS_e}$</td>
+<td>$F(\alpha, b-1, ab(n-1))$</td>
+<td></td>
+</tr>
+<tr>
+<td>AB</td>
+<td>$SS_{AB}$</td>
+<td>$(a-1)(b-1)$</td>
+<td>$MS_{AB}=(a-1)(b-1)$</td>
+<td>$\frac{MS_AB}{MS_e}$</td>
+<td>$F(\alpha, (a-1)(b-1), ab(n-1))$</td>
+<td></td>
+</tr>
+<tr>
+<td>Error</td>
+<td>$SS_e=SS_{error}$</td>
+<td>$ab(n-1)$</td>
+<td>$MS_e=ab(n-1)$</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$SS_t=SS_{total}$</td>
+<td>$N-1$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="cálculo-de-residuos">Cálculo de residuos</h1>
+<p>Residuo = $e_{ijk}$</p>
+<p>$$e_{ijk}= dato \enspace observado - dato \enspace ajustado$$</p>
+<p>$$e_{ijk}= y_{ijk} - promedio \enspace de \enspace la \enspace combinación \enspace de \enspace tratamiento$$</p>
+<h1 id="gráficos-de-análisis-de-residuos">Gráficos de análisis de residuos</h1>
+<h3 id="para-verificar-normalidad">Para verificar Normalidad:</h3>
+<ul>
+<li>Histograma</li>
+<li>Grafico de probabilidad normal</li>
+</ul>
+<h3 id="para-verificar-varianza-constante-e-independencia">Para verificar varianza constante e independencia</h3>
+<ul>
+<li>Residuo vs Valor ajustado</li>
+<li>Residuos vs Factor A</li>
+<li>Residuos vs Factor B</li>
+<li>Residuos vs Factor de interaccion AB</li>
+</ul>
+<h3 id="para-verificar-independencia">Para verificar independencia</h3>
+<ul>
+<li>Residuos vs Orden de corrida</li>
+</ul>
+<h1 id="forma-de-aleatorizar">Forma de aleatorizar</h1>
+<h1 id="en-qué-se-diferencia-este-diseño-de-los-otros">En ¿qué se diferencia este diseño de los otros?</h1>
+<h1 id="ejemplo">Ejemplo</h1>
+</article>
+</div>
+<div class="article bottom"></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">My New Hugo Site</p>
+    <p class="powerby"><span>Powered&nbsp;by&nbsp;</span><a href="https://gohugo.io" 
+        target="_blank" rel="noopener noreferrer">Hugo</a><span>&nbsp;&amp;&nbsp;</span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank" rel="noopener noreferrer">Notepadium</a></p></div>
+</section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>

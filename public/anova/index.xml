@@ -1,0 +1,150 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anovas on My New Hugo Site</title>
+    <link>http://example.org/anova/</link>
+    <description>Recent content in Anovas on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Apr 2021 16:29:25 -0600</lastBuildDate>
+    
+        <atom:link href="http://example.org/anova/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Anova 2 factores</title>
+      <link>http://example.org/anova/2factor/</link>
+      <pubDate>Wed, 21 Apr 2021 16:29:25 -0600</pubDate>
+      
+      <guid>http://example.org/anova/2factor/</guid>
+      <description>&lt;h1 id=&#34;modelo-de-anova&#34;&gt;Modelo de anova&lt;/h1&gt;
+&lt;p&gt;Suponiendo que tenemos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Factor A con a niveles&lt;/li&gt;
+&lt;li&gt;Factor B con b niveles&lt;/li&gt;
+&lt;li&gt;n replicas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;modelo&#34;&gt;Modelo:&lt;/h3&gt;
+&lt;p&gt;$$
+y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha \beta)_{ij} + e_{ijk} \enspace
+\begin{cases}
+i = 1 &amp;hellip; a \\&lt;br&gt;
+j = 1 &amp;hellip; b \\&lt;br&gt;
+k = 1 &amp;hellip; n
+\end{cases}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;donde&#34;&gt;Donde:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$y_{ijk}$ denota la ijk-ésima observación&lt;/li&gt;
+&lt;li&gt;$\mu$ es la media global&lt;/li&gt;
+&lt;li&gt;$\alpha_i$ es un parámetro asociado al i-ésimo nivel del factor A&lt;/li&gt;
+&lt;li&gt;$\beta_j$ es un parámetro asociado al j-ésimo nivel del factor B&lt;/li&gt;
+&lt;li&gt;$(\alpha \beta)_{ij}$  s un parámetro asociado al ij-ésimo tratamiento del nivel i de A con el nivel j de B&lt;/li&gt;
+&lt;li&gt;$e_{ijk}$ es el componente de error aleatorio. Supone normalmente distribuido, con media cero, varianza constante e independientes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;planteamiento-de-hipótesis&#34;&gt;Planteamiento de hipótesis&lt;/h1&gt;
+&lt;p&gt;Se tendran 3 juegos de hipotesis, para el factor A, B y el factor de interaccion AB.&lt;/p&gt;
+&lt;h4 id=&#34;para-el-factor-a&#34;&gt;Para el factor A:&lt;/h4&gt;
+&lt;p&gt;$$
+\text{Ho:}\enspace\sum_{i = 1}^{a} \alpha_i = 0 \\&lt;br&gt;
+\text{Ha:}\enspace\alpha_i \neq 0 \enspace\text{para algún}\enspace i
+$$&lt;/p&gt;
+&lt;h4 id=&#34;para-el-factor-b&#34;&gt;Para el factor B:&lt;/h4&gt;
+&lt;p&gt;$$
+\text{Ho:}\enspace\sum_{j = 1}^{b} \beta_j = 0 \\&lt;br&gt;
+\text{Ha:}\enspace\beta_j \neq 0 \enspace\text{para algún}\enspace j
+$$&lt;/p&gt;
+&lt;h4 id=&#34;para-el-factor-de-intereaccion-ab&#34;&gt;Para el factor de intereaccion AB:&lt;/h4&gt;
+&lt;p&gt;$$
+\text{Ho:}\enspace\sum_{i = 1}^{a}\sum_{j = 1}^{b} (\alpha\beta)_{ij} = 0 \\&lt;br&gt;
+\text{Ha:}\enspace(\alpha\beta)_{ij} \neq 0 \enspace\text{para algún}\enspace ij
+$$&lt;/p&gt;
+&lt;h1 id=&#34;tabla-anova&#34;&gt;Tabla Anova&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Fuente u  origen de  la  variación&lt;/th&gt;
+&lt;th&gt;Suma de  Cuadrados ($SS$)&lt;/th&gt;
+&lt;th&gt;Grados  de  Libertad ($df$)&lt;/th&gt;
+&lt;th&gt;Media de  Cuadrados ($MS$)&lt;/th&gt;
+&lt;th&gt;F&lt;/th&gt;
+&lt;th&gt;F crítico&lt;/th&gt;
+&lt;th&gt;Valor P&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;$SS_A$&lt;/td&gt;
+&lt;td&gt;$a$&lt;/td&gt;
+&lt;td&gt;$MS_A=\frac{SS_A}{a-1}$&lt;/td&gt;
+&lt;td&gt;$\frac{MS_A}{MS_e}$&lt;/td&gt;
+&lt;td&gt;$F(\alpha, a-1, ab(n-1))$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;$SS_B$&lt;/td&gt;
+&lt;td&gt;$b$&lt;/td&gt;
+&lt;td&gt;$MS_B=\frac{SS_B}{b-1}$&lt;/td&gt;
+&lt;td&gt;$\frac{MS_B}{MS_e}$&lt;/td&gt;
+&lt;td&gt;$F(\alpha, b-1, ab(n-1))$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AB&lt;/td&gt;
+&lt;td&gt;$SS_{AB}$&lt;/td&gt;
+&lt;td&gt;$(a-1)(b-1)$&lt;/td&gt;
+&lt;td&gt;$MS_{AB}=(a-1)(b-1)$&lt;/td&gt;
+&lt;td&gt;$\frac{MS_AB}{MS_e}$&lt;/td&gt;
+&lt;td&gt;$F(\alpha, (a-1)(b-1), ab(n-1))$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Error&lt;/td&gt;
+&lt;td&gt;$SS_e=SS_{error}$&lt;/td&gt;
+&lt;td&gt;$ab(n-1)$&lt;/td&gt;
+&lt;td&gt;$MS_e=ab(n-1)$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;$SS_t=SS_{total}$&lt;/td&gt;
+&lt;td&gt;$N-1$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;cálculo-de-residuos&#34;&gt;Cálculo de residuos&lt;/h1&gt;
+&lt;p&gt;Residuo = $e_{ijk}$&lt;/p&gt;
+&lt;p&gt;$$e_{ijk}= dato \enspace observado - dato \enspace ajustado$$&lt;/p&gt;
+&lt;p&gt;$$e_{ijk}= y_{ijk} - promedio \enspace de \enspace la \enspace combinación \enspace de \enspace tratamiento$$&lt;/p&gt;
+&lt;h1 id=&#34;gráficos-de-análisis-de-residuos&#34;&gt;Gráficos de análisis de residuos&lt;/h1&gt;
+&lt;h3 id=&#34;para-verificar-normalidad&#34;&gt;Para verificar Normalidad:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Histograma&lt;/li&gt;
+&lt;li&gt;Grafico de probabilidad normal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;para-verificar-varianza-constante-e-independencia&#34;&gt;Para verificar varianza constante e independencia&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Residuo vs Valor ajustado&lt;/li&gt;
+&lt;li&gt;Residuos vs Factor A&lt;/li&gt;
+&lt;li&gt;Residuos vs Factor B&lt;/li&gt;
+&lt;li&gt;Residuos vs Factor de interaccion AB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;para-verificar-independencia&#34;&gt;Para verificar independencia&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Residuos vs Orden de corrida&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;forma-de-aleatorizar&#34;&gt;Forma de aleatorizar&lt;/h1&gt;
+&lt;h1 id=&#34;en-qué-se-diferencia-este-diseño-de-los-otros&#34;&gt;En ¿qué se diferencia este diseño de los otros?&lt;/h1&gt;
+&lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
