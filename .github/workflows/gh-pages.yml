@@ -21,7 +21,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo -D # Publish drafts, should be changed
+        run: hugo -D --destination ./docs # Publish drafts, should be changed
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
