@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://jdvalenzuelah.github.io/anova-wiki/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Anova WIKI"
 theme = "hugo-notepadium"
 
 [params]
