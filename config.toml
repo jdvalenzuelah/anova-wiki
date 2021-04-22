@@ -1,4 +1,4 @@
-baseURL = "https://jdvalenzuelah.github.io/anova-wiki/"
+baseURL = "https://jdvalenzuelah.github.io/anova-wiki"
 languageCode = "en-us"
 title = "Anova WIKI"
 theme = "hugo-notepadium"
