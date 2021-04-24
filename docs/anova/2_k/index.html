@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Anova 2 a la K&nbsp;&ndash;&nbsp;Anova WIKI</title><link rel="stylesheet" href="/anova-wiki/css/core.min.86791815bdcfebb0d6f9e3581f3aa791893d6c8fca8aa6cf4bf37aa303965afafff7dfa72fdab433cf3aec4d2cb07fcf.css" integrity="sha384-hnkYFb3P67DW&#43;eNYHzqnkYk9bI/KiqbPS/N6owOWWvr/99&#43;nL9q0M8867E0ssH/P"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Anova 2 a la K" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/anova-wiki/"><span class="site name">Anova WIKI</span></a></span>
+        <span class="header right-side"></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Anova 2 a la K</h1><p class="article date">Lunes, Enero 24, 2021</p></section><article class="article markdown-body"><h1 id="modelo-de-anova-2-a-la-k">Modelo de Anova 2 a la K</h1>
+<h2 id="modelo">Modelo</h2>
+<p>Ecuación del modelo</p>
+<p>$$
+y_{ij} = B_o + B_1 X_1 + B_2 X_2 + e_{ij}
+$$</p>
+<p>Ecuación Ajustada</p>
+<p>$$
+y_{ij} = B_o + (\frac{Efecto}{2}) X_1 + (\frac{Efecto}{2}) X_2 + e_{ij}
+$$</p>
+<p>Ecuación Unidades Fisica</p>
+<p>$$
+y_{ij} = B_o + (\frac{Efecto}{2})(\frac{X-media}{valores}) + (\frac{Efecto}{2}) (\frac{X-media}{valores}) + e_{ij}
+$$</p>
+<p>El número de observaciones (tc) en uno de estos experimentos es determinado al tomar el número de niveles, que es 2 y elevarlo a la potencia del número de factores k:</p>
+<ul>
+<li>$tc = 2^k$</li>
+</ul>
+<h4 id="tabla-de-combinaciones-de-2-a-la-2">Tabla de Combinaciones de 2 a la 2</h4>
+<table>
+<thead>
+<tr>
+<th>Combinaciones</th>
+<th>A</th>
+<th>B</th>
+<th>AB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;(1)</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>b</td>
+<td>-1</td>
+<td>1</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tabla-de-combinaciones-de-2-a-la-3">Tabla de combinaciones de 2 a la 3</h4>
+<table>
+<thead>
+<tr>
+<th>Combinaciones</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>AB</th>
+<th>AC</th>
+<th>BC</th>
+<th>ABC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;(1)</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>b</td>
+<td>-1</td>
+<td>1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ab</td>
+<td>1</td>
+<td>1</td>
+<td>-1</td>
+<td>1</td>
+<td>1</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>c</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ac</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>ac</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="plantamiento-de-hipotesis">Plantamiento de Hipotesis</h1>
+<p>Las hipotesis son iguales al modelo de ANOVA DE 2 Factores</p>
+<h1 id="tabla-de-anova">Tabla de Anova</h1>
+<p>Calculo de Efecto</p>
+<p>$\frac{contrate}{n*2^k}$</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Suma de  Cuadrados ($SS$)</th>
+<th>Grados  de  Libertad ($df$)</th>
+<th>Media de  Cuadrados ($MS$)</th>
+<th>F</th>
+<th>F crítico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>$\frac{(contraste_a)^2}{n*2^k}$</td>
+<td>$n-1$</td>
+<td>$.\frac{SS}{G_a}$</td>
+<td>$\frac{MS_A}{MSE}$</td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>$\frac{(contraste_b)^2}{n*2^k}$</td>
+<td>$n-g$</td>
+<td>$.\frac{SS}{G_b}$</td>
+<td>$\frac{MS_B}{MSE}$</td>
+<td></td>
+</tr>
+<tr>
+<td>AB</td>
+<td>$\frac{(contraste_ab)^2}{n*2^k}$</td>
+<td>$G_a * G_b</td>
+<td>$.\frac{SS}{G_ab}$</td>
+<td>$\frac{MS_AB}{MSE}$</td>
+<td></td>
+</tr>
+<tr>
+<td>Error</td>
+<td>$\text{Total - (A+AB+B)}$</td>
+<td>$\text{Total - (A+B)}</td>
+<td>$.\frac{SS}{G_{e}}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TOTAL</td>
+<td>$\sum{(y)^2_{ij}} - \frac{(total)^2}{n*2^k}$</td>
+<td>$N-1$</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Se rechaza Ho cuando $F&gt; F_critico$ o $Valor_p &lt; \alpha$ lo que indica que el factor es significativo</p>
+<h1 id="calculo-de-residuos">Calculo de Residuos</h1>
+<p>Residuo = $e_{ijk}$</p>
+<p>$$e_{ij} = \text{Dato Observado - Y ajustado}$$</p>
+<p>Donde:</p>
+<ul>
+<li>Dato observado = Dato dado por el experimento</li>
+<li>Y ajustado = Es la ecuación ajustada, evaluada con los simbolos</li>
+</ul>
+<h1 id="gráficos-de-análisis-de-residuos">Gráficos de análisis de residuos</h1>
+<h3 id="para-verificar-normalidad">Para verificar Normalidad:</h3>
+<ul>
+<li>Histograma</li>
+<li>Grafico de probabilidad normal</li>
+<li>Resumen de Estadistica Descriptiva</li>
+</ul>
+<h3 id="para-verificar-varianza-constante-e-independencia">Para verificar varianza constante e independencia</h3>
+<p>En los factores se realizaran unicamente los que son significativos.</p>
+<ul>
+<li>Residuo vs Factores</li>
+<li>Residuo vs Orden de Corrida</li>
+<li>Residuo vs Interracción</li>
+<li>Residuo vs Valor Ajustado</li>
+</ul>
+<h1 id="en-qué-se-diferencia-este-diseño-de-los-otros">En ¿qué se diferencia este diseño de los otros?</h1>
+<p>Este modelo se diferencia en que solo se tiene un factor, por lo mismo dentro del analisis de residuo solo se hace una grafica de Residuo vs Tratamientos, Graficas de Interración. Además usan mas niveles, en comparación a otros modelos</p>
+<h1 id="experencia-en-microproyecto">Experencia en Microproyecto</h1>
+<p>Este modelo fue un poco complicado, ya que requeria varias interraciones entre los factores, pero es uno de los experimentos más completos, además me aporto a entender no solo conceptualmente el tema si no que interactivo, ya que muchas veces no nos enseñan como puede llegar a usar el modelo en un experimento real.</p>
+<h1 id="ejemplo">Ejemplo</h1>
+</article>
+</div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/anova-wiki/anova/bloques/"><span class="iconfont icon-article"></span>Bloques</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">Anova WIKI</p>
+    <p class="powerby"><span>Powered&nbsp;by&nbsp;</span><a href="https://gohugo.io" 
+        target="_blank" rel="noopener noreferrer">Hugo</a><span>&nbsp;&amp;&nbsp;</span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank" rel="noopener noreferrer">Notepadium</a></p></div>
+</section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>

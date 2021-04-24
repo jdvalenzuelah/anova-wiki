@@ -5,10 +5,351 @@
     <description>Recent content on Anova WIKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Apr 2021 16:29:25 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 24 Apr 2021 11:35:16 -0600</lastBuildDate>
     
         <atom:link href="https://jdvalenzuelah.github.io/anova-wiki/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Anova 2 a la K</title>
+      <link>https://jdvalenzuelah.github.io/anova-wiki/anova/2_k/</link>
+      <pubDate>Sat, 24 Apr 2021 11:35:16 -0600</pubDate>
+      
+      <guid>https://jdvalenzuelah.github.io/anova-wiki/anova/2_k/</guid>
+      <description>&lt;h1 id=&#34;modelo-de-anova-2-a-la-k&#34;&gt;Modelo de Anova 2 a la K&lt;/h1&gt;
+&lt;h2 id=&#34;modelo&#34;&gt;Modelo&lt;/h2&gt;
+&lt;p&gt;Ecuación del modelo&lt;/p&gt;
+&lt;p&gt;$$
+y_{ij} = B_o + B_1 X_1 + B_2 X_2 + e_{ij}
+$$&lt;/p&gt;
+&lt;p&gt;Ecuación Ajustada&lt;/p&gt;
+&lt;p&gt;$$
+y_{ij} = B_o + (\frac{Efecto}{2}) X_1 + (\frac{Efecto}{2}) X_2 + e_{ij}
+$$&lt;/p&gt;
+&lt;p&gt;Ecuación Unidades Fisica&lt;/p&gt;
+&lt;p&gt;$$
+y_{ij} = B_o + (\frac{Efecto}{2})(\frac{X-media}{valores}) + (\frac{Efecto}{2}) (\frac{X-media}{valores}) + e_{ij}
+$$&lt;/p&gt;
+&lt;p&gt;El número de observaciones (tc) en uno de estos experimentos es determinado al tomar el número de niveles, que es 2 y elevarlo a la potencia del número de factores k:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$tc = 2^k$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;tabla-de-combinaciones-de-2-a-la-2&#34;&gt;Tabla de Combinaciones de 2 a la 2&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Combinaciones&lt;/th&gt;
+&lt;th&gt;A&lt;/th&gt;
+&lt;th&gt;B&lt;/th&gt;
+&lt;th&gt;AB&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ldquo;(1)&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;a&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;tabla-de-combinaciones-de-2-a-la-3&#34;&gt;Tabla de combinaciones de 2 a la 3&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Combinaciones&lt;/th&gt;
+&lt;th&gt;A&lt;/th&gt;
+&lt;th&gt;B&lt;/th&gt;
+&lt;th&gt;C&lt;/th&gt;
+&lt;th&gt;AB&lt;/th&gt;
+&lt;th&gt;AC&lt;/th&gt;
+&lt;th&gt;BC&lt;/th&gt;
+&lt;th&gt;ABC&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ldquo;(1)&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;a&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ab&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ac&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ac&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;abc&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;plantamiento-de-hipotesis&#34;&gt;Plantamiento de Hipotesis&lt;/h1&gt;
+&lt;p&gt;Las hipotesis son iguales al modelo de ANOVA DE 2 Factores&lt;/p&gt;
+&lt;h1 id=&#34;tabla-de-anova&#34;&gt;Tabla de Anova&lt;/h1&gt;
+&lt;p&gt;Calculo de Efecto&lt;/p&gt;
+&lt;p&gt;$\frac{contrate}{n*2^k}$&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Suma de  Cuadrados ($SS$)&lt;/th&gt;
+&lt;th&gt;Grados  de  Libertad ($df$)&lt;/th&gt;
+&lt;th&gt;Media de  Cuadrados ($MS$)&lt;/th&gt;
+&lt;th&gt;F&lt;/th&gt;
+&lt;th&gt;F crítico&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;$\frac{(contraste_a)^2}{n*2^k}$&lt;/td&gt;
+&lt;td&gt;$n-1$&lt;/td&gt;
+&lt;td&gt;$.\frac{SS}{G_a}$&lt;/td&gt;
+&lt;td&gt;$\frac{MS_A}{MSE}$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;$\frac{(contraste_b)^2}{n*2^k}$&lt;/td&gt;
+&lt;td&gt;$n-g$&lt;/td&gt;
+&lt;td&gt;$.\frac{SS}{G_b}$&lt;/td&gt;
+&lt;td&gt;$\frac{MS_B}{MSE}$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AB&lt;/td&gt;
+&lt;td&gt;$\frac{(contraste_ab)^2}{n*2^k}$&lt;/td&gt;
+&lt;td&gt;$G_a * G_b&lt;/td&gt;
+&lt;td&gt;$.\frac{SS}{G_ab}$&lt;/td&gt;
+&lt;td&gt;$\frac{MS_AB}{MSE}$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Error&lt;/td&gt;
+&lt;td&gt;$\text{Total - (A+AB+B)}$&lt;/td&gt;
+&lt;td&gt;$\text{Total - (A+B)}&lt;/td&gt;
+&lt;td&gt;$.\frac{SS}{G_{e}}$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TOTAL&lt;/td&gt;
+&lt;td&gt;$\sum{(y)^2_{ij}} - \frac{(total)^2}{n*2^k}$&lt;/td&gt;
+&lt;td&gt;$N-1$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Se rechaza Ho cuando $F&amp;gt; F_critico$ o $Valor_p &amp;lt; \alpha$ lo que indica que el factor es significativo&lt;/p&gt;
+&lt;h1 id=&#34;calculo-de-residuos&#34;&gt;Calculo de Residuos&lt;/h1&gt;
+&lt;p&gt;Residuo = $e_{ijk}$&lt;/p&gt;
+&lt;p&gt;$$e_{ij} = \text{Dato Observado - Y ajustado}$$&lt;/p&gt;
+&lt;p&gt;Donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dato observado = Dato dado por el experimento&lt;/li&gt;
+&lt;li&gt;Y ajustado = Es la ecuación ajustada, evaluada con los simbolos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;gráficos-de-análisis-de-residuos&#34;&gt;Gráficos de análisis de residuos&lt;/h1&gt;
+&lt;h3 id=&#34;para-verificar-normalidad&#34;&gt;Para verificar Normalidad:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Histograma&lt;/li&gt;
+&lt;li&gt;Grafico de probabilidad normal&lt;/li&gt;
+&lt;li&gt;Resumen de Estadistica Descriptiva&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;para-verificar-varianza-constante-e-independencia&#34;&gt;Para verificar varianza constante e independencia&lt;/h3&gt;
+&lt;p&gt;En los factores se realizaran unicamente los que son significativos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Residuo vs Factores&lt;/li&gt;
+&lt;li&gt;Residuo vs Orden de Corrida&lt;/li&gt;
+&lt;li&gt;Residuo vs Interracción&lt;/li&gt;
+&lt;li&gt;Residuo vs Valor Ajustado&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;en-qué-se-diferencia-este-diseño-de-los-otros&#34;&gt;En ¿qué se diferencia este diseño de los otros?&lt;/h1&gt;
+&lt;p&gt;Este modelo se diferencia en que solo se tiene un factor, por lo mismo dentro del analisis de residuo solo se hace una grafica de Residuo vs Tratamientos, Graficas de Interración. Además usan mas niveles, en comparación a otros modelos&lt;/p&gt;
+&lt;h1 id=&#34;experencia-en-microproyecto&#34;&gt;Experencia en Microproyecto&lt;/h1&gt;
+&lt;p&gt;Este modelo fue un poco complicado, ya que requeria varias interraciones entre los factores, pero es uno de los experimentos más completos, además me aporto a entender no solo conceptualmente el tema si no que interactivo, ya que muchas veces no nos enseñan como puede llegar a usar el modelo en un experimento real.&lt;/p&gt;
+&lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bloques</title>
+      <link>https://jdvalenzuelah.github.io/anova-wiki/anova/bloques/</link>
+      <pubDate>Sat, 24 Apr 2021 11:32:35 -0600</pubDate>
+      
+      <guid>https://jdvalenzuelah.github.io/anova-wiki/anova/bloques/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anova 1 factor Completamenta Aleatorizado</title>
+      <link>https://jdvalenzuelah.github.io/anova-wiki/anova/1factor_aleatorizado/</link>
+      <pubDate>Sat, 24 Apr 2021 10:25:58 -0600</pubDate>
+      
+      <guid>https://jdvalenzuelah.github.io/anova-wiki/anova/1factor_aleatorizado/</guid>
+      <description>&lt;h1 id=&#34;modelo-de-anova-1-factor-completamenta-aleatorizado&#34;&gt;Modelo de Anova 1 factor Completamenta Aleatorizado&lt;/h1&gt;
+&lt;h2 id=&#34;modelo&#34;&gt;Modelo&lt;/h2&gt;
+&lt;p&gt;Cada observaciones del experimento se describen de con un modelo estadistico.&lt;/p&gt;
+&lt;p&gt;$$
+y_{ij} = \mu + \tau_i + e_{ijk}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;donde&#34;&gt;Donde&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$y_{ij}$ = Es variable aleatoria que denoja ij-ésimas observación&lt;/li&gt;
+&lt;li&gt;$\mu$ = Parametro que denota la media global&lt;/li&gt;
+&lt;li&gt;$\tau_i$ = Efecto del i-ésimo tratamiento de y&lt;/li&gt;
+&lt;li&gt;$\varepsilon_ij$ = Error aleatorio que se supone la normalidad, varianza constante e independencia.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;plantamiento-de-hipotesis&#34;&gt;Plantamiento de Hipotesis&lt;/h1&gt;
+&lt;p&gt;Se tienen 1 hipotesis en donde se plantean por medio de i-ésimas, y se toman la media global $\mu_i$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$$H_o = \mu_i + \mu_i+1 &amp;hellip; \mu_n$$&lt;/li&gt;
+&lt;li&gt;$$\text{Las medias no todas son iguales}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;tabla-de-anova&#34;&gt;Tabla de Anova&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Fuente u  origen de  la  variación&lt;/th&gt;
+&lt;th&gt;Suma de  Cuadrados ($SS$)&lt;/th&gt;
+&lt;th&gt;Grados  de  Libertad ($df$)&lt;/th&gt;
+&lt;th&gt;Media de  Cuadrados ($MS$)&lt;/th&gt;
+&lt;th&gt;F&lt;/th&gt;
+&lt;th&gt;F crítico&lt;/th&gt;
+&lt;th&gt;Valor P&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Tratamiento&lt;/td&gt;
+&lt;td&gt;$SS_Tratamiento$&lt;/td&gt;
+&lt;td&gt;$g-1$&lt;/td&gt;
+&lt;td&gt;$MS_A=\frac{SS_Tratamient}{g-1}$&lt;/td&gt;
+&lt;td&gt;$\frac{MS_Trata}{MS_e}$&lt;/td&gt;
+&lt;td&gt;$F(\alpha, g-1, N-g)$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Error&lt;/td&gt;
+&lt;td&gt;$SS_e=SS_{error}$&lt;/td&gt;
+&lt;td&gt;$N-g$&lt;/td&gt;
+&lt;td&gt;$MS_e=\frac{SS_e}{(N-g)}$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;$SS_t=SS_{total}$&lt;/td&gt;
+&lt;td&gt;$N-1$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Se rechaza Ho cuando $F&amp;gt; F_critico$ o $Valor_p &amp;lt; \alpha$&lt;/p&gt;
+&lt;h1 id=&#34;calculo-de-residuos&#34;&gt;Calculo de Residuos&lt;/h1&gt;
+&lt;p&gt;Residuo = $e_{ijk}$&lt;/p&gt;
+&lt;p&gt;$$e_{ijk}= dato \enspace observado - dato \enspace ajustado$$&lt;/p&gt;
+&lt;h1 id=&#34;gráficos-de-análisis-de-residuos&#34;&gt;Gráficos de análisis de residuos&lt;/h1&gt;
+&lt;h3 id=&#34;para-verificar-normalidad&#34;&gt;Para verificar Normalidad:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Histograma&lt;/li&gt;
+&lt;li&gt;Grafico de probabilidad normal&lt;/li&gt;
+&lt;li&gt;Resumen de Estadistica Descriptiva&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;para-verificar-varianza-constante-e-independencia&#34;&gt;Para verificar varianza constante e independencia&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Residuo vs Niveles del Factor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;en-qué-se-diferencia-este-diseño-de-los-otros&#34;&gt;En ¿qué se diferencia este diseño de los otros?&lt;/h1&gt;
+&lt;p&gt;Este modelo se diferencia en que solo se tiene un factor, por lo mismo dentro del analisis de residuo solo se hace una grafica de Residuo vs Tratamientos..&lt;/p&gt;
+&lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>Anova 2 factores</title>

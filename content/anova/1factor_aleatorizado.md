@@ -1,7 +1,7 @@
 ---
 title: "Anova 1 factor Completamenta Aleatorizado"
 date: 2021-04-24T10:25:58-06:00
-draft: true
+draft: false
 ---
 
 # Modelo de Anova 1 factor Completamenta Aleatorizado

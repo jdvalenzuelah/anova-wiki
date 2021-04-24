@@ -1,7 +1,7 @@
 ---
 title: "Anova 2 factores"
 date: 2021-04-21T16:29:25-06:00
-draft: true
+draft: false
 ---
 
 # Modelo de anova

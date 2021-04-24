@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Anova 1 factor Completamenta Aleatorizado&nbsp;&ndash;&nbsp;Anova WIKI</title><link rel="stylesheet" href="/anova-wiki/css/core.min.86791815bdcfebb0d6f9e3581f3aa791893d6c8fca8aa6cf4bf37aa303965afafff7dfa72fdab433cf3aec4d2cb07fcf.css" integrity="sha384-hnkYFb3P67DW&#43;eNYHzqnkYk9bI/KiqbPS/N6owOWWvr/99&#43;nL9q0M8867E0ssH/P"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Anova 1 factor Completamenta Aleatorizado" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/anova-wiki/"><span class="site name">Anova WIKI</span></a></span>
+        <span class="header right-side"></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Anova 1 factor Completamenta Aleatorizado</h1><p class="article date">Lunes, Enero 24, 2021</p></section><article class="article markdown-body"><h1 id="modelo-de-anova-1-factor-completamenta-aleatorizado">Modelo de Anova 1 factor Completamenta Aleatorizado</h1>
+<h2 id="modelo">Modelo</h2>
+<p>Cada observaciones del experimento se describen de con un modelo estadistico.</p>
+<p>$$
+y_{ij} = \mu + \tau_i + e_{ijk}
+$$</p>
+<h4 id="donde">Donde</h4>
+<ul>
+<li>$y_{ij}$ = Es variable aleatoria que denoja ij-ésimas observación</li>
+<li>$\mu$ = Parametro que denota la media global</li>
+<li>$\tau_i$ = Efecto del i-ésimo tratamiento de y</li>
+<li>$\varepsilon_ij$ = Error aleatorio que se supone la normalidad, varianza constante e independencia.</li>
+</ul>
+<h1 id="plantamiento-de-hipotesis">Plantamiento de Hipotesis</h1>
+<p>Se tienen 1 hipotesis en donde se plantean por medio de i-ésimas, y se toman la media global $\mu_i$</p>
+<ul>
+<li>$$H_o = \mu_i + \mu_i+1 &hellip; \mu_n$$</li>
+<li>$$\text{Las medias no todas son iguales}$$</li>
+</ul>
+<h1 id="tabla-de-anova">Tabla de Anova</h1>
+<table>
+<thead>
+<tr>
+<th>Fuente u  origen de  la  variación</th>
+<th>Suma de  Cuadrados ($SS$)</th>
+<th>Grados  de  Libertad ($df$)</th>
+<th>Media de  Cuadrados ($MS$)</th>
+<th>F</th>
+<th>F crítico</th>
+<th>Valor P</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tratamiento</td>
+<td>$SS_Tratamiento$</td>
+<td>$g-1$</td>
+<td>$MS_A=\frac{SS_Tratamient}{g-1}$</td>
+<td>$\frac{MS_Trata}{MS_e}$</td>
+<td>$F(\alpha, g-1, N-g)$</td>
+<td></td>
+</tr>
+<tr>
+<td>Error</td>
+<td>$SS_e=SS_{error}$</td>
+<td>$N-g$</td>
+<td>$MS_e=\frac{SS_e}{(N-g)}$</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$SS_t=SS_{total}$</td>
+<td>$N-1$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Se rechaza Ho cuando $F&gt; F_critico$ o $Valor_p &lt; \alpha$</p>
+<h1 id="calculo-de-residuos">Calculo de Residuos</h1>
+<p>Residuo = $e_{ijk}$</p>
+<p>$$e_{ijk}= dato \enspace observado - dato \enspace ajustado$$</p>
+<h1 id="gráficos-de-análisis-de-residuos">Gráficos de análisis de residuos</h1>
+<h3 id="para-verificar-normalidad">Para verificar Normalidad:</h3>
+<ul>
+<li>Histograma</li>
+<li>Grafico de probabilidad normal</li>
+<li>Resumen de Estadistica Descriptiva</li>
+</ul>
+<h3 id="para-verificar-varianza-constante-e-independencia">Para verificar varianza constante e independencia</h3>
+<ul>
+<li>Residuo vs Niveles del Factor</li>
+</ul>
+<h1 id="en-qué-se-diferencia-este-diseño-de-los-otros">En ¿qué se diferencia este diseño de los otros?</h1>
+<p>Este modelo se diferencia en que solo se tiene un factor, por lo mismo dentro del analisis de residuo solo se hace una grafica de Residuo vs Tratamientos..</p>
+<h1 id="ejemplo">Ejemplo</h1>
+</article>
+</div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/anova-wiki/anova/bloques/"><span class="iconfont icon-article"></span>Bloques</a></p><p><a class="link" href="/anova-wiki/anova/2factor/"><span class="iconfont icon-article"></span>Anova 2 factores</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">Anova WIKI</p>
+    <p class="powerby"><span>Powered&nbsp;by&nbsp;</span><a href="https://gohugo.io" 
+        target="_blank" rel="noopener noreferrer">Hugo</a><span>&nbsp;&amp;&nbsp;</span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank" rel="noopener noreferrer">Notepadium</a></p></div>
+</section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>
