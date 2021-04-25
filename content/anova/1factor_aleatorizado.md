@@ -54,7 +54,8 @@ $$e_{ijk}= dato \enspace observado - dato \enspace ajustado$$
 
 # En ¿qué se diferencia este diseño de los otros?
 Este modelo se diferencia en que solo se tiene un factor, por lo mismo dentro del analisis de residuo solo se hace una grafica de Residuo vs Tratamientos..
-# Ejemplo
 
+# Ejemplo
+[Descargar](/anova-wiki/Ejemplo_2_k.xlsx)
 
 

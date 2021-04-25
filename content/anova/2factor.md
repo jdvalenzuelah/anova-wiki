@@ -84,6 +84,10 @@ $$e_{ijk}= y_{ijk} - promedio \enspace de \enspace la \enspace combinación \ens
 ### Para verificar independencia
 - Residuos vs Orden de corrida
 
-# Forma de aleatorizar
 # En ¿qué se diferencia este diseño de los otros?
+
+Este modelo se diferencia en que solo se puede trabjar cuando se tienen 2 factores, pero cualquier numero de niveles para cualquiera de los 2 factores, con este analisis podemos obtener 
+
+
 # Ejemplo
+[Descargar](/anova-wiki/Ejemplo_2_k.xlsx)
