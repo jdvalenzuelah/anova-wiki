@@ -198,7 +198,7 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;AB&lt;/td&gt;
 &lt;td&gt;$\frac{(contraste_ab)^2}{n*2^k}$&lt;/td&gt;
-&lt;td&gt;$G_a * G_b&lt;/td&gt;
+&lt;td&gt;$G_a * G_b$&lt;/td&gt;
 &lt;td&gt;$.\frac{SS}{G_ab}$&lt;/td&gt;
 &lt;td&gt;$\frac{MS_AB}{MSE}$&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -206,7 +206,7 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;Error&lt;/td&gt;
 &lt;td&gt;$\text{Total - (A+AB+B)}$&lt;/td&gt;
-&lt;td&gt;$\text{Total - (A+B)}&lt;/td&gt;
+&lt;td&gt;$\text{Total - (A+B)}$&lt;/td&gt;
 &lt;td&gt;$.\frac{SS}{G_{e}}$&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -250,6 +250,8 @@ $$&lt;/p&gt;
 &lt;h1 id=&#34;experencia-en-microproyecto&#34;&gt;Experencia en Microproyecto&lt;/h1&gt;
 &lt;p&gt;Este modelo fue un poco complicado, ya que requeria varias interraciones entre los factores, pero es uno de los experimentos más completos, además me aporto a entender no solo conceptualmente el tema si no que interactivo, ya que muchas veces no nos enseñan como puede llegar a usar el modelo en un experimento real.&lt;/p&gt;
 &lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jdvalenzuelah.github.io/anova-wiki/anova-wiki/Ejemplo_2_k.xlsx&#34;&gt;Descargar&lt;/a&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -259,7 +261,91 @@ $$&lt;/p&gt;
       <pubDate>Sat, 24 Apr 2021 11:32:35 -0600</pubDate>
       
       <guid>https://jdvalenzuelah.github.io/anova-wiki/anova/bloques/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;modelo-de-anova&#34;&gt;Modelo de anova&lt;/h1&gt;
+&lt;h3 id=&#34;modelo&#34;&gt;Modelo:&lt;/h3&gt;
+&lt;p&gt;$$
+y_{ijk} = \mu + \tau_i + \beta_j + \epsilon_{ij}
+\begin{cases}
+i = 1 &amp;hellip; a \\&lt;br&gt;
+j = 1 &amp;hellip; b
+\end{cases}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;donde&#34;&gt;Donde:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$y_{ijk}$ denota la ijk-ésima observación&lt;/li&gt;
+&lt;li&gt;$\mu$ es la media global&lt;/li&gt;
+&lt;li&gt;$\tau_i$ es el efecto del tratamiento $i$&lt;/li&gt;
+&lt;li&gt;$\beta_j$ es el efecto del block $j$&lt;/li&gt;
+&lt;li&gt;$\epsilon_{ijk}$ es el componente de error aleatorio. Supone normalmente distribuido, con media cero, varianza constante e independientes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;planteamiento-de-hipótesis&#34;&gt;Planteamiento de hipótesis&lt;/h1&gt;
+&lt;p&gt;$$
+\text{Ho:}\enspace\mu_1 = \mu_2 = &amp;hellip;\mu_a\\&lt;br&gt;
+\text{Ha:}\enspace No \enspace todas \enspace las \enspace medias \enspace son \enspace iguales
+$$&lt;/p&gt;
+&lt;h1 id=&#34;tabla-anova&#34;&gt;Tabla Anova&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Fuente u  origen de  la  variación&lt;/th&gt;
+&lt;th&gt;Suma de  Cuadrados ($SS$)&lt;/th&gt;
+&lt;th&gt;Grados  de  Libertad ($df$)&lt;/th&gt;
+&lt;th&gt;Media de  Cuadrados ($MS$)&lt;/th&gt;
+&lt;th&gt;F&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Tratamientos&lt;/td&gt;
+&lt;td&gt;$SS_{trat}$&lt;/td&gt;
+&lt;td&gt;$a-1$&lt;/td&gt;
+&lt;td&gt;$MS_{Trat}$&lt;/td&gt;
+&lt;td&gt;$MS_{trat}/MS_e$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bloques&lt;/td&gt;
+&lt;td&gt;$SS_{block}$&lt;/td&gt;
+&lt;td&gt;$b-1$&lt;/td&gt;
+&lt;td&gt;$MS_{block}$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Error&lt;/td&gt;
+&lt;td&gt;$SS_e=SS_{error}$&lt;/td&gt;
+&lt;td&gt;$(a-1)((b-1)$&lt;/td&gt;
+&lt;td&gt;$MS_e$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;$SS_t=S_{trat} + SS_{Block} + SS_e$&lt;/td&gt;
+&lt;td&gt;$N-1$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;cálculo-de-residuos&#34;&gt;Cálculo de residuos&lt;/h1&gt;
+&lt;p&gt;$$e_{ij}=y_{ij}-(\bar{y}_{i*} + \bar{y}_{j*} - \bar{y}_{**}) \\
+donde \enspace (\bar{y}_{i*} + \bar{y}_{j*} - \bar{y}_{**}) = \text{valor ajustado}
+$$&lt;/p&gt;
+&lt;h1 id=&#34;gráficos-de-análisis-de-residuos&#34;&gt;Gráficos de análisis de residuos&lt;/h1&gt;
+&lt;h3 id=&#34;para-verificar-normalidad&#34;&gt;Para verificar Normalidad:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Histograma&lt;/li&gt;
+&lt;li&gt;Grafico de probabilidad normals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;para-verificar-varianza-constante-e-independencia&#34;&gt;Para verificar varianza constante e independencia&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Residuo vs Valor ajustado&lt;/li&gt;
+&lt;li&gt;Residuos vs Factor A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;en-qué-se-diferencia-este-diseño-de-los-otros&#34;&gt;En ¿qué se diferencia este diseño de los otros?&lt;/h1&gt;
+&lt;p&gt;Este modelo se diferencia en que solo se esta evaluando 1 factor, pero que puede ser afectado por otro factor. Para esto se &amp;ldquo;bloquea&amp;rdquo; el factor indeseado para determinar el efecto del factor que se quiere evaluar, sin que el factor indeseado pueda afectar nuestras conclusiones.&lt;/p&gt;
+&lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jdvalenzuelah.github.io/anova-wiki/anova-wiki/Ejemplo_2_k.xlsx&#34;&gt;Descargar&lt;/a&gt;
+&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -348,6 +434,8 @@ $$&lt;/p&gt;
 &lt;h1 id=&#34;en-qué-se-diferencia-este-diseño-de-los-otros&#34;&gt;En ¿qué se diferencia este diseño de los otros?&lt;/h1&gt;
 &lt;p&gt;Este modelo se diferencia en que solo se tiene un factor, por lo mismo dentro del analisis de residuo solo se hace una grafica de Residuo vs Tratamientos..&lt;/p&gt;
 &lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jdvalenzuelah.github.io/anova-wiki/anova-wiki/Ejemplo_2_k.xlsx&#34;&gt;Descargar&lt;/a&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -481,9 +569,11 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Residuos vs Orden de corrida&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;forma-de-aleatorizar&#34;&gt;Forma de aleatorizar&lt;/h1&gt;
 &lt;h1 id=&#34;en-qué-se-diferencia-este-diseño-de-los-otros&#34;&gt;En ¿qué se diferencia este diseño de los otros?&lt;/h1&gt;
+&lt;p&gt;Este modelo se diferencia en que solo se puede trabjar cuando se tienen 2 factores, pero cualquier numero de niveles para cualquiera de los 2 factores, con este analisis podemos obtener&lt;/p&gt;
 &lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jdvalenzuelah.github.io/anova-wiki/anova-wiki/Ejemplo_2_k.xlsx&#34;&gt;Descargar&lt;/a&gt;
+&lt;/p&gt;
 </description>
     </item>
     

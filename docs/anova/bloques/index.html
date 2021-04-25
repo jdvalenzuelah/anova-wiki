@@ -5,7 +5,91 @@
 <meta name="twitter:title" content="Bloques" /><body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/anova-wiki/"><span class="site name">Anova WIKI</span></a></span>
         <span class="header right-side"></span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Bloques</h1><p class="article date">Lunes, Enero 24, 2021</p></section><article class="article markdown-body"></article>
+    <h1 class="article title">Bloques</h1><p class="article date">Lunes, Enero 24, 2021</p></section><article class="article markdown-body"><h1 id="modelo-de-anova">Modelo de anova</h1>
+<h3 id="modelo">Modelo:</h3>
+<p>$$
+y_{ijk} = \mu + \tau_i + \beta_j + \epsilon_{ij}
+\begin{cases}
+i = 1 &hellip; a \\<br>
+j = 1 &hellip; b
+\end{cases}
+$$</p>
+<h4 id="donde">Donde:</h4>
+<ul>
+<li>$y_{ijk}$ denota la ijk-ésima observación</li>
+<li>$\mu$ es la media global</li>
+<li>$\tau_i$ es el efecto del tratamiento $i$</li>
+<li>$\beta_j$ es el efecto del block $j$</li>
+<li>$\epsilon_{ijk}$ es el componente de error aleatorio. Supone normalmente distribuido, con media cero, varianza constante e independientes.</li>
+</ul>
+<h1 id="planteamiento-de-hipótesis">Planteamiento de hipótesis</h1>
+<p>$$
+\text{Ho:}\enspace\mu_1 = \mu_2 = &hellip;\mu_a\\<br>
+\text{Ha:}\enspace No \enspace todas \enspace las \enspace medias \enspace son \enspace iguales
+$$</p>
+<h1 id="tabla-anova">Tabla Anova</h1>
+<table>
+<thead>
+<tr>
+<th>Fuente u  origen de  la  variación</th>
+<th>Suma de  Cuadrados ($SS$)</th>
+<th>Grados  de  Libertad ($df$)</th>
+<th>Media de  Cuadrados ($MS$)</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tratamientos</td>
+<td>$SS_{trat}$</td>
+<td>$a-1$</td>
+<td>$MS_{Trat}$</td>
+<td>$MS_{trat}/MS_e$</td>
+</tr>
+<tr>
+<td>Bloques</td>
+<td>$SS_{block}$</td>
+<td>$b-1$</td>
+<td>$MS_{block}$</td>
+<td></td>
+</tr>
+<tr>
+<td>Error</td>
+<td>$SS_e=SS_{error}$</td>
+<td>$(a-1)((b-1)$</td>
+<td>$MS_e$</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$SS_t=S_{trat} + SS_{Block} + SS_e$</td>
+<td>$N-1$</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="cálculo-de-residuos">Cálculo de residuos</h1>
+<p>$$e_{ij}=y_{ij}-(\bar{y}_{i*} + \bar{y}_{j*} - \bar{y}_{**}) \\
+donde \enspace (\bar{y}_{i*} + \bar{y}_{j*} - \bar{y}_{**}) = \text{valor ajustado}
+$$</p>
+<h1 id="gráficos-de-análisis-de-residuos">Gráficos de análisis de residuos</h1>
+<h3 id="para-verificar-normalidad">Para verificar Normalidad:</h3>
+<ul>
+<li>Histograma</li>
+<li>Grafico de probabilidad normals</li>
+</ul>
+<h3 id="para-verificar-varianza-constante-e-independencia">Para verificar varianza constante e independencia</h3>
+<ul>
+<li>Residuo vs Valor ajustado</li>
+<li>Residuos vs Factor A</li>
+</ul>
+<h1 id="en-qué-se-diferencia-este-diseño-de-los-otros">En ¿qué se diferencia este diseño de los otros?</h1>
+<p>Este modelo se diferencia en que solo se esta evaluando 1 factor, pero que puede ser afectado por otro factor. Para esto se &ldquo;bloquea&rdquo; el factor indeseado para determinar el efecto del factor que se quiere evaluar, sin que el factor indeseado pueda afectar nuestras conclusiones.</p>
+<h1 id="ejemplo">Ejemplo</h1>
+<p><a href="/anova-wiki/Ejemplo_2_k.xlsx">Descargar</a>
+</p>
+</article>
 </div>
 <div class="article bottom"><section class="article navigation"><p><a class="link" href="/anova-wiki/anova/2_k/"><span class="iconfont icon-article"></span>Anova 2 a la K</a></p><p><a class="link" href="/anova-wiki/anova/1factor_aleatorizado/"><span class="iconfont icon-article"></span>Anova 1 factor Completamenta Aleatorizado</a></p></section></div></section><section id="footer"><div class="footer-wrap">
     <p class="copyright">Anova WIKI</p>
